@@ -7,4 +7,4 @@ Daily 2 problems.
 
 Priotize Easy -> Medium.
 
-Going Hard when becoming a full-fledge developer.
+Going Hard after becoming a full-fledge developer.
