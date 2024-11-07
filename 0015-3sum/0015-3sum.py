@@ -24,9 +24,9 @@ class Solution:
                     left += 1
                     right -= 1
                     
-                elif total < 0:  # If the sum is too small, move the left pointer to increase the sum
+                elif total < 0:
                     left += 1
-                else:  # If the sum is too large, move the right pointer to decrease the sum
+                else:
                     right -= 1
                     
         return result
