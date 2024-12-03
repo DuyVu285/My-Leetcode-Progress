@@ -3,8 +3,11 @@ class Solution:
         new_s = []
         spaces_set = set(spaces)
         n = len(s)
+        index = 0
+        spaces_len = len(spaces)
         for i in range(n):
-            if i in spaces_set:
+            if index < spaces_len and i == spaces[index]:
                 new_s.append(' ')
+                index += 1
             new_s.append(s[i])
         return ''.join(new_s)
