@@ -1,15 +1,21 @@
 class ProductOfNumbers:
-
     def __init__(self):
-        self.stack = []
-
+        self.prefix_product = []
+        self.product = 1
     def add(self, num: int) -> None:
-        self.stack.append(num)
-
+        if num is not 0:
+            self.product *= num
+            self.prefix_product.append(self.product)
+        else:
+            self.product = 1
+            self.prefix_product = []
     def getProduct(self, k: int) -> int:
-        nums_to_take = self.stack[-k:]
-        product = math.prod(nums_to_take)
-        return product
+        if k == len(self.prefix_product):
+            return self.prefix_product[-1]
+        elif k > len(self.prefix_product):
+            return 0
+        else:
+            return int(self.prefix_product[-1]/self.prefix_product[-1-k])
 
 # Your ProductOfNumbers object will be instantiated and called as such:
 # obj = ProductOfNumbers()
